@@ -3,7 +3,10 @@ import style from '../styles/Home.module.css'
 
 export default function Home() {
 
-  const arr = []
+  const arr_educ = ['Hschool', 'The Complete Guide to Build RESTful APIs, Udemy', 'unit testing/integration tests with Jest, Udemy',
+    'Interactive SQL Simulator, Stepic', 'React Native, Udemy']
+
+  const arr_lang = ['English B1', 'Russian', 'Belarussian']
 
   return (
     <div className={style.wrapper}>
@@ -43,11 +46,35 @@ export default function Home() {
 
       <div className={style.skills}>
 
-
-
+        <div className={style.list}>
+          <p><span>Programming Languagies:</span>JavaScript(ES6+), TypeScript</p>
+          <p><span>Web Tecnologies:</span>Node.js, React, Express, Next, Nodemon,
+            axios, babel, Material UI, Mantine, JSON, XML, Jest,
+            Mocha, html, css, sass(scss), git</p>
+          <p><span>Application Servers:</span>Node.js</p>
+          <p><span>Databases:</span>MySQL, PostgreSQL, MongoDB</p>
+          <p><span>Operating Systems:</span>Windows family</p>
+        </div>
 
       </div>
 
-    </div>
+      <div className={style.back}>
+
+        <div className={style.back1}>
+          <div className={style.education}>
+            {arr_educ.map((el) => <p>{el}</p>)}
+          </div>
+        </div>
+
+        <div className={style.back2}>
+          <div className={style.lang}>
+            <div className={style.img}></div>
+            {arr_lang.map((el) => <p>{el}</p>)}
+          </div>
+        </div>
+        
+      </div>
+
+    </div >
   )
 }
